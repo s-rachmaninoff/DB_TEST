@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="compose">
+
+
+<select id="getUserName" parameterType="HashMap" resultType="String">
+	select userName from main where userName = #{user_name};
+</select>
+
+
+
+
+<insert id="loginTime" parameterType="HashMap">
+	insert into aism_user_login_history values(DEFAULT,DEFAULT,#{id});
+</insert>
+
+
+
+<delete id="deletetWorkList" parameterType="HashMap">
+	delete from aism_user_work_list where user=#{user} and subject =#{project};
+</delete>
+	
+	
+	
+<update id="updateUserInfo" parameterType="HashMap">
+	update aism_user_membership_info set  phone=#{phone} , addr=#{addr} , email=#{email} , job=#{job} , profile=#{profile}, username =#{username}, nick =#{nick} where BINARY id=#{id} 
+</update>
+	
+</mapper>
