@@ -6,6 +6,16 @@
 <select id="getUserName" parameterType="HashMap" resultType="String">
 	select userName from main where userName = #{user_name};
 </select>
+<select id="getUserAge" parameterType="HashMap" resultType="int">
+	select age from main where userName = #{user_age};
+</select>
+<select id="getUserGender" parameterType="HashMap" resultType="String">
+	select gender from main where userName = #{user_gender};
+</select>
+<select id="getUserAll" parameterType="HashMap" resultType="testDTO">
+	select * from main where userName = #{user_all};
+</select>
+
 
 
 

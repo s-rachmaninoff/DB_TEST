@@ -1,0 +1,36 @@
+@charset "EUC-KR";
+
+.btn_container{
+	width: 600px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.btn_container>div{
+	background: #000;
+	border-radius: 8px;
+	color: #fff;
+	padding: 5px;
+	cursor: pointer;
+}
+.result_container{
+	width: 600px;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+
+.input_box{
+	width: 100%;
+	margin-top: 100px;
+	background: #dbdbdb;
+	border: 0;
+	padding: 5px;
+	text-align: center;
+}
+.input_box_container{
+	width: 600px;
+	margin: 0 auto;
+	margin-bottom: 18px;
+}
