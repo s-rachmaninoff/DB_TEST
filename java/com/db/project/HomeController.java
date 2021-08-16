@@ -30,17 +30,30 @@ public class HomeController {
 	
 	
 	
-	@PostMapping("getUserName")
-	public @ResponseBody String getUserName(@RequestParam("name")String name) {
+//	@PostMapping("getUserName")
+//	public @ResponseBody String getUserName(@RequestParam("name")String name) {
+//		
+//		String resultValue = service.getUserName(name);
+//		
+//		System.out.println(name);
+//		
+//		System.out.println("DB에서 가져온 결과값");
+//		System.out.println(resultValue);
+//		
+//		return resultValue;
+//	}
+	
+	@GetMapping("getUserName")
+	public @ResponseBody HashMap<String, Object> getUserName(@RequestParam("name")String name) {
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		DB_DTO dto = service.getUserAll(name);
 		
-		String resultValue = service.getUserName(name);
-		
-		System.out.println(name);
+		map.put("result", dto);
 		
 		System.out.println("DB에서 가져온 결과값");
-		System.out.println(resultValue);
+		System.out.println(dto);
 		
-		return resultValue;
+		return map;
 	}
 	
 	@PostMapping("getUserAge")

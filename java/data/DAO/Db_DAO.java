@@ -9,7 +9,7 @@ import data.DTO.DB_DTO;
 
 
 @Repository
-public class Db_DAO extends SqlSessionDaoSupport implements DB_DAO_INTERFACE {
+public class DB_DAO extends SqlSessionDaoSupport implements DB_DAO_INTERFACE {
 	
 	//유저 이름 가져오기
 	@Override
@@ -19,6 +19,7 @@ public class Db_DAO extends SqlSessionDaoSupport implements DB_DAO_INTERFACE {
 		return getSqlSession().selectOne("getUserName",map);
 	}
 	
+	//유저 성별 가져오기
 	@Override
 	public String getUserGender(String gender) {
 			HashMap<String,String> map = new HashMap<String, String>();
@@ -26,6 +27,7 @@ public class Db_DAO extends SqlSessionDaoSupport implements DB_DAO_INTERFACE {
 		return getSqlSession().selectOne("getUserGender",map);
 	}
 	
+	//유저 나이 가져오기
 	@Override
 	public int getUserAge(String age) {
 			HashMap<String,String> map = new HashMap<String, String>();
@@ -33,6 +35,7 @@ public class Db_DAO extends SqlSessionDaoSupport implements DB_DAO_INTERFACE {
 		return getSqlSession().selectOne("getUserAge",map);
 	}
 	
+	//쩐부 가져오기
 	@Override
 	public DB_DTO getUserAll(String all) {
 			HashMap<String,String> map = new HashMap<String, String>();
