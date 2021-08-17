@@ -80,7 +80,7 @@ public class HomeController {
 		return resultValue;
 	}
 	
-	@GetMapping("getUserAll")
+	@PostMapping("getUserAll")
 	public @ResponseBody HashMap<String, Object> getUserAll(@RequestParam("all")String all) {
 		HashMap<String, Object> map = new HashMap<String, Object>();
 		DB_DTO dto = service.getUserAll(all);

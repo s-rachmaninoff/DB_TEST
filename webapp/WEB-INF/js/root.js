@@ -21,7 +21,7 @@ $(".name").click(function() {
 	let input_box = $(".input_box").val();
 	$.ajax({
 		url: "getUserAll",
-		type: "get",
+		type: "post",
 		data: { "all": input_box },
 		success: function(data) {
 			console.log(data.result);
@@ -61,7 +61,7 @@ $(".gender").click(function() {
 	let input_box = $(".input_box").val();
 	$.ajax({
 		url: "getUserAll",
-		type: "get",
+		type: "post",
 		data: { "all": input_box },
 		success: function(data) {
 			console.log(data.result);
@@ -75,7 +75,7 @@ $(".all").click(function() {
 	let input_box = $(".input_box").val();
 	$.ajax({
 		url: "getUserAll",
-		type: "get",
+		type: "post",
 		data: { "all": input_box },
 		success: function(data) {
 			console.log(data.result);
